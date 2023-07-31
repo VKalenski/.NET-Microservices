@@ -1,8 +1,9 @@
-﻿using PlatformService.Models;
-using PlatrformService.Data;
+﻿#region Usings
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using PlatformService.Models;
+#endregion
 
 namespace PlatformService.Data
 {
@@ -14,9 +15,10 @@ namespace PlatformService.Data
         {
             _context = context;
         }
+
         public void CreatePlatform(Platform plat)
         {
-            if (plat == null)
+            if(plat == null)
             {
                 throw new ArgumentNullException(nameof(plat));
             }
