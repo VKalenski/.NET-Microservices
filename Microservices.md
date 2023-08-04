@@ -1,18 +1,18 @@
 # **.NET Microservices**
 
->[1. Microservices](#microservices) 
-> 
->[2. Benefits of Microservices](#benefits-of-microservices) 
-> 
->[3. Synchronous Messaging](#synchronous-messaging) 
+>[1. Microservices](#microservices)
 >
->[4. Asynchronous Messaging](#asynchronous-messaging) 
+>[2. Benefits of Microservices](#benefits-of-microservices)
 >
->[5. RabbitMQ](#rabbitmq) 
+>[3. Synchronous Messaging](#synchronous-messaging)
 >
->[6. gRPC](#grpc) 
+>[4. Asynchronous Messaging](#asynchronous-messaging)
 >
->[7. Some Commands](#some-commands) 
+>[5. RabbitMQ](#rabbitmq)
+>
+>[6. gRPC](#grpc)
+>
+>[7. Some Commands](#some-commands)
 >
 
 ---

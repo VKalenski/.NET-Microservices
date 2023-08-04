@@ -1,45 +1,103 @@
-### Platform Service
+# **Platform Service**
 
-- Function as an "Asset Register"
-- Track all the platforms / systems in the company
-- Built by the infrastructure team
-- User by: 
-    - Infrastructure team
-    - Technical Support Team
-    - Engineering
-    - Accounting
-    - Procurement
+>[1. Platform Service](#platform-service)
+>
+>[2. Initial Commands](#initial-commands)
+>
+>[3. Docker Commands](#docker-commands)
+>
+>[4. Kubernetes Commands](#kubernetes-commands)
+>
 
 ---
 
-- ```dotnet new webapi -n PlatformService --framework net6.0```
-- code -r PlatformService
-- dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
-- dotnet add package Microsoft.EntityFrameworkCore
-- dotnet add package Microsoft.EntityFrameworkCore.Design: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/
-- dotnet add package Microsoft.EntityFrameworkCore.InMemory
-- dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-- dotnet build
-- dotnet run
-- prop + TAB -> for create property
-- Ctrl + B -> hide the panel
+### **Platform Service**
 
-- docker --version
+- Function as an "Asset Register";
+- Track all the platforms / systems in the company;
+- Built by the infrastructure team;
+- User by:
+    - Infrastructure team;
+    - Technical Support Team;
+    - Engineering;
+    - Accounting;
+    - Procurement.
 
-- docker build -t vilislavkalenski/platformservice .
-- docker run -p 8080:80 -d vilislavkalenski/platformservice
-- docker ps
-- docker stop IdDocker
-- docker start IdDocker
-- docker push vilislavkalenski/platformservice
+---
 
+### **Initial Commands**
 
-To deploy into DockerHub -> Kubernetes function is must be on in Docker Desktop
-- kubectl version
-- kubectl get pods
-- kubectl apply -f platforms-depl.yml
-- kubectl get deployments
-- kubectl delete deployment platforms-depl.yml
+Create new web api with name PlatformService:
+```dotnet new webapi -n PlatformService --framework net6.0```
 
-- kubectl apply -f platforms-np-srv.yml
-- kubectl get services
+Open in VS Code:
+```code -r PlatformService```
+
+Add some packages:
+```dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection```
+```dotnet add package Microsoft.EntityFrameworkCore```
+```dotnet add package Microsoft.EntityFrameworkCore.Design: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/```
+```dotnet add package Microsoft.EntityFrameworkCore.InMemory```
+```dotnet add package Microsoft.EntityFrameworkCore.SqlServer```
+
+Check .NET version:
+```dotnet --version```
+
+Build project:
+```dotnet build```
+
+Run project:
+```dotnet run```
+
+---
+
+### **Docker Commands**
+Check Docker version:
+```ocker --version```
+
+Build docker image:
+```docker build -t vilislavkalenski/platformservice .```
+
+Run docker image with current port (8080:80):
+```docker run -p 8080:80 -d vilislavkalenski/platformservice```
+
+Show docker containers:
+```docker ps```
+Push docker image:
+```docker push vilislavkalenski/platformservice```
+
+Stop docker image:
+```docker stop IdDocker```
+
+Start docker image:
+```docker start IdDocker```
+
+---
+
+### **Kubernetes Commands**
+
+> *To deploy into DockerHub -> Kubernetes function is must be "ON" in Docker Desktop*
+
+Check K8s version:
+```kubectl version```
+
+Get all pods in current namespace (default):
+```kubectl get pods```
+
+Apply current deployment file in K8s:
+```kubectl apply -f platforms-depl.yml```
+
+Get all deployments in current namespace (default):
+```kubectl get deployments```
+
+Delete current deployment file in namespace (default):
+```kubectl delete deployment platforms-depl```
+
+Apply current service file in K8s:
+```kubectl apply -f platforms-np-srv.yml```
+
+Get all services in current namespace (default):
+```kubectl get services```
+
+Create .NET migration:
+```dotnet-ef migrations add InitialCreate```
