@@ -4,11 +4,13 @@
 >
 >[2. Initial Commands](#initial-commands)
 >
->[3. Docker Commands](#docker-commands)
+>[3. Packages, Build & Run](#packages-and-run)
 >
->[4. Kubernetes Commands](#kubernetes-commands)
+>[4. Docker Commands](#docker-commands)
 >
->[5. .NET Commands](#net-commands)
+>[5. Kubernetes Commands](#kubernetes-commands)
+>
+>[6. .NET Commands](#net-commands)
 
 ---
 
@@ -24,6 +26,8 @@
     - Accounting;
     - Procurement.
 
+#### [🔼 Back to top](#platform-service)
+
 ---
 
 ### **Initial Commands**
@@ -38,12 +42,46 @@ dotnet new webapi -n PlatformService --framework net6.0
 code -r PlatformService
 ```
 
-> **Add some packages:**
-```dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection```
-```dotnet add package Microsoft.EntityFrameworkCore```
-```dotnet add package Microsoft.EntityFrameworkCore.Design: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/```
-```dotnet add package Microsoft.EntityFrameworkCore.InMemory```
-```dotnet add package Microsoft.EntityFrameworkCore.SqlServer```
+#### [🔼 Back to top](#platform-sService)
+
+---
+
+### Packages and Run
+
+> **Microsoft.EntityFrameworkCore:** https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/
+```
+dotnet add package Microsoft.EntityFrameworkCore
+```
+
+> **Microsoft.EntityFrameworkCore.InMemory:** https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.InMemory/
+```
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+```
+
+> **Microsoft.EntityFrameworkCore.SqlServer:** https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/
+```
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+```
+
+> **Microsoft.EntityFrameworkCore.Design:** https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.Design/
+```
+dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
+> **AutoMapper.Extensions.Microsoft.DependencyInjection:** https://www.nuget.org/packages/Microsoft.Extensions.DependencyInjection/
+```
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+```
+
+> **RabbitMQ.Client:** https://www.nuget.org/packages/RabbitMQ.Client/
+```
+dotnet add package RabbitMQ.Client
+```
+
+> **Grpc.AspNetCore:** https://www.nuget.org/packages/Grpc.AspNetCore/
+```
+dotnet add package Grpc.AspNetCore
+```
 
 > **Check .NET version:**
 ```
@@ -60,6 +98,8 @@ dotnet build
 dotnet run
 ```
 
+#### [🔼 Back to top](#platform-service)
+
 ---
 
 ### **Docker Commands**
@@ -68,7 +108,7 @@ dotnet run
 ```
 docker --version
 ```
---
+
 > **Build docker image:**
 ```
 docker build -t vilislavkalenski/platformservice .
@@ -97,6 +137,8 @@ docker stop IdDocker
 ```
 docker start IdDocker
 ```
+
+#### [🔼 Back to top](#platform-service)
 
 ---
 
@@ -139,6 +181,8 @@ kubectl apply -f platforms-np-srv.yml
 kubectl get services
 ```
 
+#### [🔼 Back to top](#platform-service)
+
 ---
 
 ### .NET Commands
@@ -147,3 +191,5 @@ kubectl get services
 ```
 dotnet-ef migrations add InitialCreate
 ```
+
+#### [🔼 Back to top](#platform-service)
