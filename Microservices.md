@@ -12,8 +12,9 @@
 >
 >[6. gRPC](#grpc)
 >
->[7. Some Commands](#some-commands)
+>[7. Ingredients](#ingredients)
 >
+>[8. Some Commands](#some-commands)
 
 ---
 
@@ -25,6 +26,8 @@
 - Form part of the (distributed) whole;
 - Self-contained / Autonomous.
 
+#### [🔼 Back to top](#.net-microservices)
+
 ---
 
 ### **Benefits of Microservices**
@@ -35,6 +38,8 @@
 - Resilient: 1 service can break the, others will continue to run;
 - Scalable: ,you can scale out only the services you need to;
 - Build to be highly replaceable / swappable.
+
+#### [🔼 Back to top](#.net-microservices)
 
 ---
 
@@ -48,6 +53,8 @@
     - Http;
     - gRPC.
 
+#### [🔼 Back to top](#.net-microservices)
+
 ---
 
 ### **Asynchronous Messaging**
@@ -60,6 +67,8 @@
 - Services don't need to know about each other, just the bus;
 - Introduces ots own range of complexitites - not a magic bullet.
 
+#### [🔼 Back to top](#.net-microservices)
+
 ---
 
 ### **RabbitMQ**
@@ -70,6 +79,8 @@
 - Messages are stored on Queues (essentially a message buffer);
 - Exchanges can be used to add "routing" functionality;
 - Uses Advanced Message Queuing Protocol (AMQP) & others.
+
+#### [🔼 Back to top](#.net-microservices)
 
 ---
 
@@ -82,9 +93,33 @@
 - Multi-language support (C# client can call a Ruby service);
 - Frequently used as a method of service to service communication.
 
+#### [🔼 Back to top](#.net-microservices)
+
+---
+
+### **Ingredients**
+
+1. .NET 6 SDK (free): https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+2. VS Code (free): https://code.visualstudio.com/download
+3. Web Browser or API Client (Postman or Insomnia)
+    - Postman  (free): https://www.postman.com/downloads/
+    - Insomnia (free): https://insomnia.rest/download
+4. GitHub Desktop (free): https://desktop.github.com/
+
+#### [🔼 Back to top](#.net-microservices)
+
 ---
 
 ### **Some commands**
 
-- ```mkdir CommandsService```
-- ```mkdir PlatformService```
+> **Create Command Service folder:**
+```
+mkdir CommandsService
+```
+
+> **Create Platform Service folder:**
+```
+mkdir PlatformService
+```
+
+#### [🔼 Back to top](#.net-microservices)
